@@ -96,6 +96,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == CREATE_REQUEST_CODE && resultCode == Activity.RESULT_OK){
             val customGameName = data?.getStringExtra(EXTRA_GAME_NAME)
             if (customGameName == null) {
@@ -104,7 +105,6 @@ class MainActivity : AppCompatActivity() {
             }
             downloadGame(customGameName)
         }
-        super.onActivityResult(requestCode, resultCode, data)
     }
 
     private fun downloadGame(customGameName: String) {

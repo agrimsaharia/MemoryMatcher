@@ -65,7 +65,7 @@ class MemoryBoardAdapter(
                     imageButton.setImageResource(memoryCard.identifier)
                 }
             }else{
-                imageButton.setImageResource(R.drawable.joker)
+                imageButton.setImageResource(R.drawable.wood)
             }
 
 
